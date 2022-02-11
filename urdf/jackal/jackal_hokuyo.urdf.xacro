@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!-- script_version=1.1 -->
+<robot name="sensor_hokuyo" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:include filename="$(find robot_gazebo)/urdf/jackal/jackal_common_properties.urdf.xacro"/>
+  <xacro:include filename="$(find robot_gazebo)/urdf/jackal/jackal_gazebo.urdf.xacro"/>
+  <xacro:include filename="$(find robot_gazebo)/urdf/jackal/jackal_properties.urdf.xacro"/>
+
+  <!-- RPLidar 2D LIDAR -->
+  <xacro:macro name="sensor_hokuyo" params="parent">
+    <joint name="laser" type="fixed">
+      <origin xyz="${laser_px} ${laser_py} ${laser_pz}" rpy="0 0.0 0" />
+      <parent link="${parent}" />
+      <child link="hokuyo_link" />
+    </joint>
+
+    <!-- Hokuyo Laser -->
+    <link name="hokuyo_link">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.1 0.1" />
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://robot_gazebo/meshes/sensors/hokuyo.dae" />
+      </geometry>
+    </visual>
+
+    <inertial>
+      <mass value="1e-5" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+    </inertial>
+    </link>
+
+    <!-- Set up laser gazebo details -->
+    <xacro:jackal_sim_2dsensor/>
+  </xacro:macro>
+</robot>

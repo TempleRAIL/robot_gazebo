@@ -1,0 +1,4 @@
+<launch>
+  <arg name="custom_gmapping_launch_file" default="$(find robot_gazebo)/launch/includes/gmapping/gmapping.launch.xml"/>
+  <include file="$(arg custom_gmapping_launch_file)"/>
+</launch>
