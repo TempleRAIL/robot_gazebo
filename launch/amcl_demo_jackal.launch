@@ -18,9 +18,5 @@
 
   <!-- Move base -->
   <include file="$(find robot_gazebo)/launch/includes/move_base_jackal.launch.xml"/>
-  <!--include file="$(find jackal_navigation)/launch/include/move_base.launch" /-->
-
-  <!-- Goal visualization -->
-  <node pkg="nav_cnn" name="goal_visualize" type="goal_visualize.py" output="screen" />
 
 </launch>

@@ -22,12 +22,5 @@
     <arg name="cmd_vel_topic" value="/move_base/cmd_vel"/>
  </include>
 
-  <!-- Goal visualization -->
-  <node pkg="nav_cnn" name="goal_visualize" type="goal_visualize.py" output="screen" />
-
-  <!-- publish cmd vel -->
-  <node pkg="drl_nav" name="mix_cmd_vel" type="cmd_vel_pub.py" output="screen" >
-    <remap from="cmd_vel" to="teleop_velocity_smoother/raw_cmd_vel"/>
-  </node>  
 
 </launch>
