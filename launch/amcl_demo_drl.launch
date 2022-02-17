@@ -1,6 +1,6 @@
 <launch>
   <!-- Map server -->
-  <arg name="map_file" default="/home/xzt/noetic_ws/src/robot_gazebo/maps/gazebo_eng_lobby/gazebo_eng_lobby.yaml"/>
+  <arg name="map_file" default="$(find robot_gazebo)/maps/gazebo_eng_lobby/gazebo_eng_lobby.yaml"/>
   <arg name="3d_sensor" default="$(env TURTLEBOT_3D_SENSOR)"/>  <!-- r200, kinect, asus_xtion_pro -->
 
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
