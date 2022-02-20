@@ -23,6 +23,6 @@
  </include>
 
   <!-- Goal visualization -->
-  <node pkg="nav_cnn" name="goal_visualize" type="goal_visualize.py" output="screen" />
+  <node pkg="drl_vo_nav" name="goal_visualize" type="goal_visualize.py" output="screen" />
 
 </launch>

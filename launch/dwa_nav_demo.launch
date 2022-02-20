@@ -8,6 +8,7 @@
   <arg name="initial_pose_x" default="1.0"/>
   <arg name="initial_pose_y" default="0.0"/>
   <arg name="initial_pose_a" default="0.13"/>
+  <arg name="rviz" default="true"/> 
 
   <!-- Pedsim Gazebo -->
   <include file="$(find pedsim_simulator)/launch/robot.launch">
@@ -27,6 +28,6 @@
   </include>
 
   <!-- Rviz -->
-  <include file="$(find robot_gazebo)/launch/view_navigation.launch"/>
+  <include file="$(find robot_gazebo)/launch/view_navigation.launch" if="$(arg rviz)"/>
 
 </launch>
