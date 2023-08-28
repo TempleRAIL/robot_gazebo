@@ -22,9 +22,9 @@ All contributors from https://github.com/naiij/robot-gazebo.git.
   journal={IEEE Transactions on Robotics}, 
   title={DRL-VO: Learning to Navigate Through Crowded Dynamic Scenes Using Velocity Obstacles}, 
   year={2023},
-  volume={},
-  number={},
-  pages={1-20},
+  volume={39},
+  number={4},
+  pages={2700-2719},
   doi={10.1109/TRO.2023.3257549}}
 
 @inproceedings{xie2021towards,
