@@ -604,7 +604,7 @@ Visualization Manager:
         Line width: 0.05000000074505806
         Scaling factor: 1
         Value: Bounding boxes
-      Topic: /pedsim_visualizer/tracked_persons
+      Topic: /track_ped
       Unreliable: false
       Value: true
       Z offset:
@@ -639,7 +639,7 @@ Visualization Manager:
         Scaling factor: 1
         Value: Simple
       Topic: /pedsim_visualizer/tracked_groups
-      Tracked persons topic: /pedsim_visualizer/tracked_persons
+      Tracked persons topic: /track_ped
       Unreliable: false
       Value: true
       Z offset:
